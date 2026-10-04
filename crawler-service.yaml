@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: crawler-service
+spec:
+  selector:
+    app: crawler-service
+  type: ClusterIP
+  ports:
+    - name: crawler-service
+      protocol: TCP
+      port: 80
+      targetPort: 8080
